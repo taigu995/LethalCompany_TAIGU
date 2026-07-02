@@ -1,0 +1,101 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>CustomCompany.CleabShip</AssemblyName>
+    <RootNamespace>CustomCompany</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <!--
+    ============================================================
+    CleanShip V81 - Lethal Company Mod
+    ============================================================
+    Build Instructions:
+    
+    1. Set GAME_DIR to your Lethal Company installation directory
+    2. Ensure BepInEx is installed in the game directory
+    3. Run: dotnet build -c Release
+    
+    Required references (auto-resolved from game directory):
+    - Assembly-CSharp.dll (game code)
+    - UnityEngine.CoreModule.dll
+    - UnityEngine.PhysicsModule.dll
+    - UnityEngine.IMGUIModule.dll
+    - UnityEngine.InputModule.dll
+    - Unity.Netcode.Runtime.dll
+    - Facepunch.Steamworks.Win64.dll
+    - BepInEx.dll
+    - 0Harmony.dll
+    - LitJSON.dll
+    ============================================================
+  -->
+
+  <PropertyGroup>
+    <!-- Set this to your Lethal Company game directory -->
+    <GameDir Condition="'$(GameDir)' == ''">$(LETHAL_COMPANY_DIR)</GameDir>
+    <BepInExDir Condition="'$(BepInExDir)' == ''">$(GameDir)/BepInEx</BepInExDir>
+    <ManagedDir Condition="'$(ManagedDir)' == ''">$(GameDir)/Lethal Company_Data/Managed</ManagedDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Game assemblies -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(ManagedDir)/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    
+    <!-- Unity assemblies -->
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedDir)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(ManagedDir)/UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(ManagedDir)/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>$(ManagedDir)/UnityEngine.InputModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(ManagedDir)/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Netcode.Runtime">
+      <HintPath>$(ManagedDir)/Unity.Netcode.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>$(ManagedDir)/Facepunch.Steamworks.Win64.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>$(ManagedDir)/Unity.Collections.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    
+    <!-- BepInEx assemblies -->
+    <Reference Include="BepInEx">
+      <HintPath>$(BepInExDir)/core/BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExDir)/core/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    
+    <!-- LitJSON -->
+    <Reference Include="LitJSON">
+      <HintPath>$(ManagedDir)/LitJSON.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
