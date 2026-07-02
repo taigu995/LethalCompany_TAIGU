@@ -9,9 +9,9 @@ namespace CustomCompany
 {
     /// <summary>
     /// CleanShip Mod - V81 Compatible
-    /// Original by qh3, updated for Lethal Company V81
+    /// Original by qh3, updated for Lethal Company V81 by TAIGU
     /// 
-    /// Changelog for V81:
+    /// Changelog for V81 (TAIGU):
     /// - Fixed transpiler patches to use pattern matching instead of hardcoded IL indices
     /// - Updated Harmony patches for V80/V81 method signature changes
     /// - Added compatibility with new utility item slot
@@ -22,13 +22,13 @@ namespace CustomCompany
     [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
     public class Plugin : BaseUnityPlugin
     {
-        public const string PluginGUID = "qh3.CustomCompany.CleanShip";
+        public const string PluginGUID = "TAIGU.CustomCompany.CleanShip";
         public const string PluginName = "CleanShip";
         public const string PluginVersion = "2.6.0"; // Bumped version for V81
 
         public static Plugin Instance;
 
-        private static readonly Harmony harmony = new Harmony("qh3.CustomCompany");
+        private static readonly Harmony harmony = new Harmony("TAIGU.CustomCompany");
 
         public static CustomLog Log = new CustomLog();
 

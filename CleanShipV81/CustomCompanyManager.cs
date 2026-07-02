@@ -137,7 +137,7 @@ namespace CustomCompany
     {
         public bool enable = true;
 
-        internal static ManualLogSource Log = Logger.CreateLogSource("qh3.CustomCompany.CleanShip");
+        internal static ManualLogSource Log = Logger.CreateLogSource("TAIGU.CustomCompany.CleanShip");
 
         public void LogInfo(object message)
         {

@@ -2,7 +2,11 @@
 
 ## 项目说明
 
-本项目是 Lethal Company（致命公司）的 CleanShip 模组的 V81 版本适配。
+本项目是 Lethal Company（致命公司）的 CleanShip 模组的 V81 版本适配，由 **TAIGU** 维护更新。
+
+- **原始作者**: qh3
+- **V81 适配**: TAIGU
+- **模组 GUID**: `TAIGU.CustomCompany.CleanShip`
 
 ### 原始模组功能
 

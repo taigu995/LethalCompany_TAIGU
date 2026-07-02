@@ -7,6 +7,8 @@
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>disable</Nullable>
+    <Authors>TAIGU</Authors>
+    <Description>CleanShip V81 - Lethal Company Mod (updated by TAIGU)</Description>
   </PropertyGroup>
 
   <!--
