@@ -6,7 +6,9 @@
 
 - **原始作者**: qh3
 - **V81 适配**: TAIGU
-- **模组 GUID**: `TAIGU.CustomCompany.CleanShip`
+- **模组 GUID**: `TAIGU.CleanShip`
+- **配置文件**: `BepInEx/config/TAIGU.CleanShip.cfg`
+- **自定义物品配置**: `BepInEx/config/TAIGU.CleanShip.json`
 
 ### 原始模组功能
 
@@ -37,6 +39,23 @@
 #### 4. 依赖更新
 - BepInEx: 5.4.21 → 5.4.2305
 - 移除对 OPJosMod (ReviveCompany) 的硬依赖，改为可选依赖
+
+#### 5. V81 物品整理修复
+- **问题**: V81 在 `PlayerControllerB.GrabObjectClientRpc` 中新增了物品重 parent 机制，当物品从"非标准位置"被拾起时强制挂载到 `elevatorTransform`，导致整理功能的物品位移无效。
+- **修复**: 添加 Harmony Prefix 补丁 `SetParentPrefix`，在整理时阻止向 `elevatorTransform` 的挂载操作。
+
+#### 6. 署名与配置
+- 模组署名从 `qh3` 更改为 `TAIGU`
+- BepInPlugin GUID 更改为 `TAIGU.CleanShip`
+- 配置文件名自动变为 `TAIGU.CleanShip.cfg`
+- 实现 `SaveBehaviourConfig` / `LoadBehaviourConfig`，使用 LitJSON 保存/加载自定义物品列表配置到 `TAIGU.CleanShip.json`
+
+#### 7. 稳定性修复
+- 重写 `CustomCompanyConfig.LoadConfig`，避免键盘枚举导致的 NullReferenceException
+- 重写 `CustomCompanyConfig.BindKey`，处理 null defaultValue 情况
+- 移除 `StartOfRound_Patch` 的 TryPatch 调用，避免 Harmony 补丁失败
+- 修复 .NET 8.0 环境下 Mono.Cecil 导入类型时产生的 System.Private.CoreLib 引用问题
+- 修复 System.Type / System.RuntimeTypeHandle TypeRef 作用域错误
 
 ## 编译说明
 
