@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanShip V81 模组下载</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 80px auto; padding: 20px; background: #1a1a2e; color: #eee; }
+        h1 { color: #e94560; text-align: center; }
+        .card { background: #16213e; border-radius: 12px; padding: 24px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .btn { display: block; width: 100%; padding: 14px; margin: 10px 0; background: #e94560; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; transition: background 0.2s; }
+        .btn:hover { background: #c73e54; }
+        .btn.secondary { background: #0f3460; }
+        .btn.secondary:hover { background: #1a4f8a; }
+        .info { font-size: 14px; color: #aaa; margin-top: 16px; line-height: 1.6; }
+        .version { text-align: center; color: #e94560; font-size: 14px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>CleanShip V81</h1>
+    <p class="version">v1.2.0 - TAIGU 适配版</p>
+    
+    <div class="card">
+        <h3>模组文件</h3>
+        <a class="btn" href="/CustomCompany.CleabShip.dll" download>下载 CustomCompany.CleabShip.dll</a>
+        <a class="btn secondary" href="/LitJSON.dll" download>下载 LitJSON.dll (依赖库)</a>
+        
+        <div class="info">
+            <p><strong>安装说明：</strong></p>
+            <p>1. 将 <code>CustomCompany.CleabShip.dll</code> 放入 <code>BepInEx/plugins/</code> 目录</p>
+            <p>2. 将 <code>LitJSON.dll</code> 放入游戏根目录（与 <code>Lethal Company.exe</code> 同级）</p>
+            <p>3. 启动游戏，配置文件将自动生成在 <code>BepInEx/config/TAIGU.CleanShip.cfg</code></p>
+            
+            <p><strong>v1.2.0 更新：</strong></p>
+            <p>- 修复 V81 物品重 parent 导致整理功能不生效的问题</p>
+            <p>- 添加 Harmony 补丁拦截 GrabObjectClientRpc 的重 parent 逻辑</p>
+            <p>- 整理时自动将物品 parent 设为 propsContainer，避免被强制挂载到电梯</p>
+        </div>
+    </div>
+</body>
+</html>
