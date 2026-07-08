@@ -17,12 +17,32 @@
     </style>
 </head>
 <body>
-    <h1>CleanShip V81</h1>
-    <p class="version">v1.2.0 - TAIGU 适配版</p>
+    <h1>TAIGU 模组下载</h1>
+    <p class="version">致命公司 V81 适配版</p>
     
     <div class="card">
-        <h3>模组文件</h3>
-        <a class="btn" href="/CustomCompany.CleabShip.dll" download>下载 CustomCompany.CleabShip.dll</a>
+        <h3>QuickOrganization - 飞船物品整理</h3>
+        <p class="version">v1.0.3</p>
+        <a class="btn" href="/QuickOrganization.dll" download>下载 QuickOrganization.dll</a>
+        
+        <div class="info">
+            <p><strong>安装说明：</strong></p>
+            <p>1. 将 <code>QuickOrganization.dll</code> 放入 <code>BepInEx/plugins/</code> 目录</p>
+            <p>2. 启动游戏，按 <strong>=</strong> 键打开/关闭整理菜单</p>
+            <p>3. 配置文件: <code>BepInEx/config/TAIGU.QuickOrganization.cfg</code></p>
+            
+            <p><strong>v1.0.3 更新：</strong></p>
+            <p>- 修复 DiscardHeldObject 补丁目标类错误</p>
+            <p>- 修复键盘检测使用传统 Input 系统</p>
+            <p>- 添加 V81 SetParent 前缀补丁</p>
+            <p>- 署名改为 TAIGU</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h3>CleanShip - 飞船清洁模组</h3>
+        <p class="version">v1.2.0</p>
+        <a class="btn secondary" href="/CustomCompany.CleabShip.dll" download>下载 CustomCompany.CleabShip.dll</a>
         <a class="btn secondary" href="/LitJSON.dll" download>下载 LitJSON.dll (依赖库)</a>
         
         <div class="info">
@@ -30,11 +50,6 @@
             <p>1. 将 <code>CustomCompany.CleabShip.dll</code> 放入 <code>BepInEx/plugins/</code> 目录</p>
             <p>2. 将 <code>LitJSON.dll</code> 放入游戏根目录（与 <code>Lethal Company.exe</code> 同级）</p>
             <p>3. 启动游戏，配置文件将自动生成在 <code>BepInEx/config/TAIGU.CleanShip.cfg</code></p>
-            
-            <p><strong>v1.2.0 更新：</strong></p>
-            <p>- 修复 V81 物品重 parent 导致整理功能不生效的问题</p>
-            <p>- 添加 Harmony 补丁拦截 GrabObjectClientRpc 的重 parent 逻辑</p>
-            <p>- 整理时自动将物品 parent 设为 propsContainer，避免被强制挂载到电梯</p>
         </div>
     </div>
 </body>
