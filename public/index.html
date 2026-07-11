@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleanShip V81 模组下载</title>
+    <title>TAIGU 模组下载</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 80px auto; padding: 20px; background: #1a1a2e; color: #eee; }
         h1 { color: #e94560; text-align: center; }
@@ -50,6 +50,25 @@
             <p>1. 将 <code>CustomCompany.CleabShip.dll</code> 放入 <code>BepInEx/plugins/</code> 目录</p>
             <p>2. 将 <code>LitJSON.dll</code> 放入游戏根目录（与 <code>Lethal Company.exe</code> 同级）</p>
             <p>3. 启动游戏，配置文件将自动生成在 <code>BepInEx/config/TAIGU.CleanShip.cfg</code></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>MicMusicPlayer - 麦克风音乐播放器</h3>
+        <p class="version">v1.0.0</p>
+        <a class="btn secondary" href="/MicMusicPlayer.dll" download>下载 MicMusicPlayer.dll</a>
+        
+        <div class="info">
+            <p><strong>安装说明：</strong></p>
+            <p>1. 将 <code>MicMusicPlayer.dll</code> 放入 <code>BepInEx/plugins/</code> 目录</p>
+            <p>2. 将音乐文件（MP3/OGG/WAV）放入 <code>BepInEx/plugins/MicMusicPlayer/music/</code> 目录</p>
+            <p>3. 启动游戏，按 <strong>F2</strong> 或 <strong>=</strong> 键打开/关闭音乐播放器</p>
+            
+            <p><strong>功能特性：</strong></p>
+            <p>- 使用 uGUI (Canvas) 渲染，兼容 URP 管线</p>
+            <p>- 支持麦克风混音（游戏内语音 + 音乐同步传输）</p>
+            <p>- 支持播放列表、音量调节、进度控制</p>
+            <p>- 通过 Windows API (GetAsyncKeyState) 检测按键，兼容新 Input System</p>
         </div>
     </div>
 </body>
